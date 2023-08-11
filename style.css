@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  /* Colors */
+  --violet: hsl(257, 40%, 49%);
+  --softMagenta: hsl(300, 69%, 71%);
+
+  /* Fonts */
+  --openSans: "Open Sans", sans-serif;
+  --poppins: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--violet);
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+.logo_container {
+  padding: 75px;
+}
+
+.logo_container > img {
+  width: 243px;
+}
+
+.hero_container {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero_image {
+  margin: 35px 0;
+}
+
+.hero_image > img {
+  width: 85%;
+}
+
+.hero_text {
+  margin: 2.8em 0 0 0;
+}
+
+.hero_text > h1 {
+  font-family: var(--poppins);
+  font-size: 3em;
+  font-weight: 600;
+  padding: 0 80px;
+}
+
+.hero_text > p {
+  font-family: var(--openSans);
+  font-size: 1.97em;
+  padding: 0 80px;
+}
+
+.hero_text > button {
+  width: 400px;
+  height: 80px;
+  font-family: var(--openSans);
+  color: var(--violet);
+  border: none;
+  border-radius: 40px;
+  font-size: 1.5em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: all 200ms ease-in;
+}
+
+.hero_text > button:hover {
+  background-color: var(--softMagenta);
+  color: white;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.social_container {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0 4em 0;
+  list-style: none;
+}
+
+.social_container > li {
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5em;
+  width: 55px;
+  height: 55px;
+  transition: border 200ms ease-in;
+}
+
+.social_container > li:hover {
+  border: 1px solid var(--softMagenta);
+  cursor: pointer;
+  transition: border 150ms ease;
+}
+
+.social_container > li:hover .fa-brands {
+  color: var(--softMagenta);
+  transition: color 150ms ease;
+}
+
+.social_container > li:not(:first-child) {
+  margin-left: 23px;
+}
+
+.fa-brands {
+  font-size: 1.8em;
+  background-color: transparent;
+  color: white;
+  padding: 0.4em 0em 0em 0.5em;
+  transition: color 200ms ease-in;
+}
+
+.fa-facebook-f {
+  padding: 0.4em 0em 0em 0.6em;
+}
+
+footer {
+  position: static;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  main {
+    background-image: url("./images/bg-desktop.svg");
+    background-position: left top;
+    background-size: cover;
+  }
+  .logo_container {
+    padding-bottom: 0;
+    padding-top: 50px;
+  }
+  .hero_container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .hero_image {
+    width: 50%;
+  }
+  .hero_text {
+    text-align: left;
+    width: 50%;
+  }
+  .hero_text > p {
+    font-size: 1.21em;
+  }
+  .hero_text > button {
+    width: 200px;
+    height: 60px;
+    margin-left: 80px;
+    margin-top: 10px;
+    font-size: 1.3em;
+  }
+  .social_container {
+    justify-content: end;
+    margin-right: 80px;
+  }
+}
